@@ -1,6 +1,6 @@
 import { urlFor } from "../sanity/client";  // Ensure the urlFor function is correctly imported
 import Link from "next/link"; // Make sure you import Link if you're using it
-
+import Image from "next/image";
 const About = ({ image, title, description, views, comments }) => {
   // Generate the image URL using Sanity's image URL builder
   const imageUrl = image ? urlFor(image).url() : "https://dummyimage.com/720x400"; // Fallback to dummy image
@@ -21,7 +21,11 @@ const About = ({ image, title, description, views, comments }) => {
         </article>
 
         <div className="flex justify-center py-6">
-          <img src={imageUrl} alt={title} className="w-full h-60 object-cover object-center" />
+          <Image className="w-full h-60 object-cover object-center"
+          width={700} 
+          height={900} 
+          src="/image/Container.png" 
+          alt="img"  />
         </div>
 
         <section className="text-gray-600 body-font">

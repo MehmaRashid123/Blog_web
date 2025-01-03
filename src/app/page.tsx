@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 
 
 
@@ -27,11 +27,12 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img
-              className="object-cover object-center rounded"
+            <Image 
+            width={500}
+            height={500}
+            className="object-cover object-center rounded"
               alt="Hero Image"
-              src="/image/ai.png"
-            />
+              src="/image/ai.png"/>
           </div>
           
         </div>
